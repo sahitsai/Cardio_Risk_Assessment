@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Predict Page
+{% endblock %}
+
+{% block content %}
+    <h1 style="text-align: center;">Predict Page</h1>
+    <form method="post" action="/predict" style="text-align: center;">
+        <div style="margin-bottom: 10px; display: inline-block; width: 45%;">
+            <div>
+                <span>Enter Patient ID</span><br>
+                <input type="text" name="patientid" placeholder="Enter patientid" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter age:</span><br>
+                <input type="text" name="age" placeholder="Enter age" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter gender:</span><br>
+                <input type="text" name="gender" placeholder="Enter gender" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter chest pain:</span><br>
+                <input type="text" name="chestpain" placeholder="Enter chestpain" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter resting BP:</span><br>
+                <input type="text" name="restingBP" placeholder="Enter restingBP" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter serum cholestrol:</span><br>
+                <input type="text" name="serumcholestrol" placeholder="Enter serumcholestrol" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter fastingbloodsugar:</span><br>
+                <input type="text" name="fastingbloodsugar" placeholder="Enter fasting blood sugar" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter restingrelectro:</span><br>
+                <input type="text" name="restingrelectro" placeholder="Enter restingrelectro" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter maxheartrate:</span><br>
+                <input type="text" name="maxheartrate" placeholder="Enter maxheartrate" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter exerciseangia:</span><br>
+                <input type="text" name="exerciseangia" placeholder="Enter exerciseangia" style="width: 250px;">
+            </div>
+            <div>
+                <span>Enter oldpeak:</span><br>
+                <input type="text" name="oldpeak" placeholder="Enter oldpeak" style="width: 250px;">
+            </div>
+             <div>
+                 <span>Enter slope:</span><br>
+                 <input type="text" name="slope" placeholder="Enter slope" style="width: 250px;">
+             </div>
+             <div>
+                 <span>Enter noofmajorvessels:</span><br>
+                 <input type="text" name="noofmajorvessels" placeholder="Enter noofmajorvessels" style="width: 250px;">
+             </div>
+             
+        </div>
+       
+        <input type="submit" value="Predict" style="margin-top: 20px;">
+    </form>
+    {% if prediction %}
+        <h2 style="text-align: center;">{{ prediction }}</h2>
+    {% endif %}
+{% endblock %}

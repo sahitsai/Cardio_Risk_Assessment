@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/bg.avif') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+        }
+        .navbar-brand, .navbar-nav .nav-link {
+            color: black;
+            font-weight: bold;
+        }
+        .navbar-custom {
+            background-color: pink; /* Custom class for cyan background */
+        }
+        .content-images img {
+            width: 33.33%;
+            float: left;
+            margin-right: 10px; /* Add spacing between images */
+        }
+        .content-images1 img {
+            width: 33.33%;
+            float: right;
+            margin-right: 10px; /* Add spacing between images */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom"> <!-- Updated class to navbar-custom -->
+        <a class="navbar-brand" href="#">Cardiovascular Disease Risk Prediction</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/predict">Predict</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        
+        {% endblock %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

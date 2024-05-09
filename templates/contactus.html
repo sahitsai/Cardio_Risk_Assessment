@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+{% block content %}
+    <h1 style="text-align: center;">Contact Us</h1>
+    <p style="text-align: center;">Email: example@example.com</p>
+    <p style="text-align: center;">Phone: 123-456-7890</p>
+    <div style="text-align: center;">
+        <img src="{{ url_for('static', filename='images/heart.jpg') }}" alt="Contact Image" height="400" width="800">
+    </div>
+{% endblock %}

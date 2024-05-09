@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="text-align: justify;">
+        <h1>About Us</h1>
+        <h2><b>Machine Learning in CVD Risk Assessment: Evaluating Traditional and Machine Learning Models in Cardiovascular Disease Risk Prediction</b></h2>
+        <p>Welcome to our dedicated platform where expertise meets innovation in the field of cardiovascular disease (CVD) risk prediction. As pioneers in integrating machine learning into CVD risk assessment, our mission is to transform how healthcare providers predict and manage CVD risks.</p>
+
+        <h2><b>Our Focus</b></h2>
+        <p>Our core focus is to bridge the gap between traditional epidemiological techniques and modern machine learning methodologies. We evaluate and implement a range of models, from established logistic regression frameworks to cutting-edge neural networks, ensuring robust risk prediction tailored to the needs of today's healthcare environments.</p>
+        <div class="content-images">
+            <img src="{{ url_for('static', filename='images/c1.jpg') }}" class="img-fluid" height="100" width="180">
+        </div>
+        <h2><b>Our Expertise</b></h2>
+        <p>Our team comprises medical experts with deep academic and practical knowledge in cardiology, data science, and artificial intelligence. By leveraging large datasets and sophisticated analytical tools, we develop predictive models that enhance accuracy in identifying potential CVD risks. Our work enables healthcare providers to make more informed decisions, optimize treatment strategies, and enhance patient outcomes.</p>
+
+        <h2><b>Innovation in CVD Risk Assessment</b></h2>
+        <p>The landscape of CVD risk assessment has evolved with the advent of machine learning, offering unprecedented precision and insights. Our platform provides a comparative analysis of traditional and contemporary models, illuminating their strengths and limitations in various clinical scenarios. This approach not only fosters a deeper understanding of risk factors but also catalyzes the adoption of more effective treatment and prevention strategies.</p>
+        <div class="content-images1">
+            <img src="{{ url_for('static', filename='images/c2.jpg') }}" class="img-fluid" height="100" width="180">
+        </div>
+        <h2><b>Our Commitment</b></h2>
+        <p>We are committed to advancing the field of CVD risk assessment by:</p>
+        <ul>
+            <li>Continuously updating our models with the latest machine learning algorithms and statistical methods.</li>
+            <li>Providing transparent and interpretable model assessments to ensure healthcare professionals can trust and understand the results.</li>
+            <li>Engaging with the academic and professional communities to stay ahead of emerging trends and technologies in healthcare analytics.</li>
+        </ul>
+        <div class="content-images">
+            <img src="{{ url_for('static', filename='images/c3.jpg') }}" class="img-fluid" height="100" width="180">
+        </div>
+        <h2><b>Connect With Us</b></h2>
+        <p>Join us as we redefine the standards of CVD risk assessment and open new pathways to healthcare success. Whether you are a healthcare provider looking to enhance your risk prediction techniques or a researcher interested in the latest trends in healthcare modeling, we are here to collaborate and support your goals.</p>
+
+        <p>Explore our website to learn more about our projects, insights, and the impact of machine learning on CVD risk assessment. Contact us to discuss how we can tailor our expertise to your specific needs and challenges.</p>
+    </div>
+{% endblock %}
